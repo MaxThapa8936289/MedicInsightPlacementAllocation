@@ -10,7 +10,7 @@ from PyQt5.QtCore import QRunnable, QThreadPool, QTimer, QObject, pyqtSignal, py
 import sys, traceback
 from wizard import Ui_Wizard
 from filehandler import FileHandler
-import StudentPlacementSorter_v0_1 as sps
+import StudentPlacementSorter_v0_2 as sps
 
 
 class WorkerSignals(QObject):
