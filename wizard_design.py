@@ -297,7 +297,7 @@ class Ui_Wizard(object):
 
     def retranslateUi(self, Wizard):
         _translate = QtCore.QCoreApplication.translate
-        Wizard.setWindowTitle(_translate("Wizard", "Medic Insight Placement Allocation Program - v0.2"))
+        Wizard.setWindowTitle(_translate("Wizard", "Medic Insight Placement Allocation Program - v0.3"))
         self.textBrowser_Welcome.setHtml(_translate("Wizard", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"

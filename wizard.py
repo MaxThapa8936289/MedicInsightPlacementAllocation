@@ -29,13 +29,17 @@ class Ui_Wizard(QObject):
         Wizard.setObjectName("Wizard")
         Wizard.setWindowModality(QtCore.Qt.NonModal)
         Wizard.setEnabled(True)
-        Wizard.resize(655, 513)
+        Wizard.resize(800, 500)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(resource_path("./assets/MI_icon.ico")), QtGui.QIcon.Selected, QtGui.QIcon.On)
         Wizard.setWindowIcon(icon)
         Wizard.setLayoutDirection(QtCore.Qt.LeftToRight)
         Wizard.setWizardStyle(QtWidgets.QWizard.ModernStyle)
         Wizard.setOptions(QtWidgets.QWizard.NoCancelButtonOnLastPage|QtWidgets.QWizard.NoDefaultButton)
+        
+        BGPixmap = QtGui.QPixmap(resource_path("./assets/Backgrd3.png"))
+        scaledBGPixmap = BGPixmap.scaledToHeight(500)
+        Wizard.setPixmap(0,scaledBGPixmap)
         
         # Page 0
         self.wizardPage0 = QtWidgets.QWizardPage()
@@ -323,7 +327,7 @@ class Ui_Wizard(QObject):
 
     def retranslateUi(self, Wizard):
         _translate = QtCore.QCoreApplication.translate
-        Wizard.setWindowTitle(_translate("Wizard", "Medic Insight Placement Allocation Program - v0.2"))
+        Wizard.setWindowTitle(_translate("Wizard", "Medic Insight Placement Allocation Program - v0.3"))
         self.label_ApiKeyMessage.setText(_translate("Wizard", "Enter a Google Cloud Geocoding API key:"))
         self.label_ApiKey.setText(_translate("Wizard", "API key:"))
         self.pushButton_ApikeyTest.setText(_translate("Wizard", "Test key"))
